@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CustomerServicesModelStoreContainer" CdmEntityContainer="CustomerServicesEntities">
+    <EntitySetMapping Name="Customer">
+      <EntityTypeMapping TypeName="CustomerServicesModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+          <ScalarProperty Name="docType" ColumnName="docType" />
+          <ScalarProperty Name="docNum" ColumnName="docNum" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="givenName" ColumnName="givenName" />
+          <ScalarProperty Name="familyName" ColumnName="familyName" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="CustomerServicesModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="serviceId" ColumnName="serviceId" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="productNameType" ColumnName="productNameType" />
+          <ScalarProperty Name="numeracioTerminal" ColumnName="numeracioTerminal" />
+          <ScalarProperty Name="soldAt" ColumnName="soldAt" />
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

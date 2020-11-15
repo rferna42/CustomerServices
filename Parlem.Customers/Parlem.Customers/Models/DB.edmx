@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CustomerServicesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="customerId" />
+          </Key>
+          <Property Name="customerId" Type="int" Nullable="false" />
+          <Property Name="docType" Type="varchar" MaxLength="5" />
+          <Property Name="docNum" Type="varchar" MaxLength="10" />
+          <Property Name="email" Type="varchar" MaxLength="120" />
+          <Property Name="givenName" Type="varchar" MaxLength="25" />
+          <Property Name="familyName" Type="varchar" MaxLength="25" />
+          <Property Name="phone" Type="int" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="serviceId" />
+          </Key>
+          <Property Name="serviceId" Type="int" Nullable="false" />
+          <Property Name="productName" Type="varchar" MaxLength="120" />
+          <Property Name="productNameType" Type="varchar" MaxLength="10" />
+          <Property Name="numeracioTerminal" Type="int" />
+          <Property Name="soldAt" Type="datetime" />
+          <Property Name="customerId" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CustomerServicesModelStoreContainer">
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CustomerServicesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="customerId" />
+          </Key>
+          <Property Name="customerId" Type="Int32" Nullable="false" />
+          <Property Name="docType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="docNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="givenName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="familyName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="serviceId" />
+          </Key>
+          <Property Name="serviceId" Type="Int32" Nullable="false" />
+          <Property Name="productName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="productNameType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="numeracioTerminal" Type="Int32" />
+          <Property Name="soldAt" Type="DateTime" Precision="3" />
+          <Property Name="customerId" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CustomerServicesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customer" EntityType="Self.Customer" />
+          <EntitySet Name="Product" EntityType="Self.Product" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CustomerServicesModelStoreContainer" CdmEntityContainer="CustomerServicesEntities">
+          <EntitySetMapping Name="Customer">
+            <EntityTypeMapping TypeName="CustomerServicesModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="customerId" ColumnName="customerId" />
+                <ScalarProperty Name="docType" ColumnName="docType" />
+                <ScalarProperty Name="docNum" ColumnName="docNum" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="givenName" ColumnName="givenName" />
+                <ScalarProperty Name="familyName" ColumnName="familyName" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="CustomerServicesModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="serviceId" ColumnName="serviceId" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="productNameType" ColumnName="productNameType" />
+                <ScalarProperty Name="numeracioTerminal" ColumnName="numeracioTerminal" />
+                <ScalarProperty Name="soldAt" ColumnName="soldAt" />
+                <ScalarProperty Name="customerId" ColumnName="customerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
