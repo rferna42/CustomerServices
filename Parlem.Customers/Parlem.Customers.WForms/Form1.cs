@@ -22,14 +22,26 @@ namespace Parlem.Customers.WForms
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            string respuesta = await GetHttp();
-            List<ViewModel.CustomerViewModel> list = JsonConvert.DeserializeObject<List<ViewModel.CustomerViewModel>>(respuesta);
-            dataGridView3.DataSource = list;
+            string customer = await GetCustomerHttp();
+            List<ViewModel.CustomerViewModel> customerList = JsonConvert.DeserializeObject<List<ViewModel.CustomerViewModel>>(customer);
+            dataGridView3.DataSource = customerList;
+
+            string product = await GetProductHttp();
+            List<ViewModel.ProductViewModel> productList = JsonConvert.DeserializeObject<List<ViewModel.ProductViewModel>>(product);
+            dataGridView4.DataSource = productList;
         }
 
-        private async Task<string> GetHttp()
+        private async Task<string> GetCustomerHttp()
         {
             WebRequest oRequest = WebRequest.Create("http://localhost:61992/api/Customer");
+            WebResponse oResponse = oRequest.GetResponse();
+            StreamReader sr = new StreamReader(oResponse.GetResponseStream());
+            return await sr.ReadToEndAsync();
+        }
+
+        private async Task<string> GetProductHttp()
+        {
+            WebRequest oRequest = WebRequest.Create("http://localhost:61992/api/Product");
             WebResponse oResponse = oRequest.GetResponse();
             StreamReader sr = new StreamReader(oResponse.GetResponseStream());
             return await sr.ReadToEndAsync();
