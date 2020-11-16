@@ -1,0 +1,8 @@
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\bin\Debug\netstandard2.0\Parlem.Customers.ViewModel.deps.json
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\bin\Debug\netstandard2.0\Parlem.Customers.ViewModel.dll
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\bin\Debug\netstandard2.0\Parlem.Customers.ViewModel.pdb
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\obj\Debug\netstandard2.0\Parlem.Customers.ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\obj\Debug\netstandard2.0\Parlem.Customers.ViewModel.AssemblyInfoInputs.cache
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\obj\Debug\netstandard2.0\Parlem.Customers.ViewModel.AssemblyInfo.cs
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\obj\Debug\netstandard2.0\Parlem.Customers.ViewModel.dll
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\ViewModel\obj\Debug\netstandard2.0\Parlem.Customers.ViewModel.pdb

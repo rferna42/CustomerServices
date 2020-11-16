@@ -7,9 +7,8 @@ namespace Parlem.Customers.Controllers
     public class CustomerController : ApiController
     {
         [HttpPost]
-        public IHttpActionResult AddCustomer(Models.ViewModel.CustomerViewModel model)
+        public IHttpActionResult AddCustomer(ViewModel.CustomerViewModel model)
         {
-
             using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
             {
                 var customer = new Models.Customer();
@@ -26,19 +25,17 @@ namespace Parlem.Customers.Controllers
                 db.Customer.Add(customer);
                 db.SaveChanges();
             }
-
             return Ok("Customer añadido.");
-
         }
 
         [HttpGet]
-        public IHttpActionResult GetCustomer(Models.ViewModel.CustomerViewModel model)
+        public IHttpActionResult GetCustomer(ViewModel.CustomerViewModel model)
         {
-            List<Models.ViewModel.CustomerViewModel> list = new List<Models.ViewModel.CustomerViewModel>();
+            List<ViewModel.CustomerViewModel> list = new List<ViewModel.CustomerViewModel>();
 
             using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
             {
-                list = (from d in db.Customer select new Models.ViewModel.CustomerViewModel
+                list = (from d in db.Customer select new ViewModel.CustomerViewModel
                 {
                     customerId = d.customerId,
                     docType = d.docType,

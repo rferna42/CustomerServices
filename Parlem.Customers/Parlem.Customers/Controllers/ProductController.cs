@@ -7,7 +7,7 @@ namespace Parlem.Customers.Controllers
     public class ProductController : ApiController
     {
         [HttpPost]
-        public IHttpActionResult AddProduct(Models.ViewModel.ProductViewModel model)
+        public IHttpActionResult AddProduct(ViewModel.ProductViewModel model)
         {
             using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
             {
@@ -26,16 +26,15 @@ namespace Parlem.Customers.Controllers
             return Ok("Producto añadido.");
         }
 
-
         [HttpGet]
-        public IHttpActionResult GetProduct(Models.ViewModel.ProductViewModel model)
+        public IHttpActionResult GetProduct(ViewModel.ProductViewModel model)
         {
-            List<Models.ViewModel.ProductViewModel> list = new List<Models.ViewModel.ProductViewModel>();
+            List<ViewModel.ProductViewModel> list = new List<ViewModel.ProductViewModel>();
 
             using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
             {
                 list = (from d in db.Product
-                        select new Models.ViewModel.ProductViewModel
+                        select new ViewModel.ProductViewModel
                         {
                             serviceId = d.serviceId,
                             productName = d.productName,
