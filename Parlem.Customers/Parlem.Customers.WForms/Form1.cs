@@ -15,11 +15,6 @@ namespace Parlem.Customers.WForms
             InitializeComponent();
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private async Task<string> GetCustomerHttp()
         {
             WebRequest oRequest = WebRequest.Create("http://localhost:61992/api/Customer");
@@ -38,7 +33,7 @@ namespace Parlem.Customers.WForms
 
         private async Task<string> GetCustomerProductHttp()
         {
-            var uri = "http://localhost:61992/api/Forms?customerId=" + int.Parse(textBox1.Text);
+            var uri = "http://localhost:61992/api/Forms?customerDocNum=" + textBox1.Text;
             WebRequest oRequest = WebRequest.Create(uri);
             WebResponse oResponse = oRequest.GetResponse();
             StreamReader sr = new StreamReader(oResponse.GetResponseStream());

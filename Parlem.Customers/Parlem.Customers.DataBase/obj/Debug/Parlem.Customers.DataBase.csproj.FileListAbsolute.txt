@@ -9,3 +9,4 @@ C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Custo
 C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\obj\Debug\Parlem.Customers.DataBase.pdb
 C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\obj\Debug\Parlem.Customers.DataBase.csprojAssemblyReference.cache

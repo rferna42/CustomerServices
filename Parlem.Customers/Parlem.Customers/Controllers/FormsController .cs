@@ -8,7 +8,7 @@ namespace Parlem.Customers.Controllers
     public class FormsController : ApiController
     {
         [HttpGet]
-        public IHttpActionResult GetProductsByCustomerId(DataBase.Model.ViewModel.CustomerProductViewModel model, int customerId)
+        public IHttpActionResult GetProductsByCustomerId(DataBase.Model.ViewModel.CustomerProductViewModel model, string customerDocNum)
         {
             var list = new List<DataBase.Model.ViewModel.CustomerProductViewModel>();
             
@@ -17,7 +17,7 @@ namespace Parlem.Customers.Controllers
                 list = (from d in db.Customer
                         join p in db.Product 
                         on d.customerId equals p.customerId
-                        where d.customerId == customerId
+                        where d.docNum == customerDocNum
                         select new DataBase.Model.ViewModel.CustomerProductViewModel
                         {
                             customerId = d.customerId,

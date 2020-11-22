@@ -41,23 +41,23 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(37, 202);
+            this.dataGridView3.Location = new System.Drawing.Point(37, 212);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(700, 150);
+            this.dataGridView3.Size = new System.Drawing.Size(700, 170);
             this.dataGridView3.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 146);
+            this.label2.Location = new System.Drawing.Point(34, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "CUSTOMER ID";
+            this.label2.Text = "DNI/NIF/NIE";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(228, 141);
+            this.button1.Location = new System.Drawing.Point(228, 127);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 143);
+            this.textBox1.Location = new System.Drawing.Point(111, 129);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
@@ -75,10 +75,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.label3.Location = new System.Drawing.Point(30, 42);
+            this.label3.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(28, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(236, 39);
+            this.label3.Size = new System.Drawing.Size(231, 49);
             this.label3.TabIndex = 4;
             this.label3.Text = "CUSTOMERS";
             // 
@@ -86,9 +87,9 @@
             // 
             this.pictureBox1.ImageLocation = "C:\\Users\\ruben.fernandezm\\Desktop\\CustomerServices\\Parlem.Customers\\Parlem.Custom" +
     "ers.WForms\\Media\\parlem.png";
-            this.pictureBox1.Location = new System.Drawing.Point(419, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(456, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(281, 114);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -103,7 +104,6 @@
             this.Controls.Add(this.dataGridView3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
