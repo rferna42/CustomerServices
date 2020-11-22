@@ -1,13 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,13 +17,7 @@ namespace Parlem.Customers.WForms
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            string customer = await GetCustomerHttp();
-            List<DataBase.Model.ViewModel.CustomerViewModel> customerList = JsonConvert.DeserializeObject<List<DataBase.Model.ViewModel.CustomerViewModel>>(customer);
-            dataGridView3.DataSource = customerList;
 
-            string product = await GetProductHttp();
-            List<DataBase.Model.ViewModel.ProductViewModel> productList = JsonConvert.DeserializeObject<List<DataBase.Model.ViewModel.ProductViewModel>>(product);
-            dataGridView4.DataSource = productList;
         }
 
         private async Task<string> GetCustomerHttp()
@@ -45,6 +34,22 @@ namespace Parlem.Customers.WForms
             WebResponse oResponse = oRequest.GetResponse();
             StreamReader sr = new StreamReader(oResponse.GetResponseStream());
             return await sr.ReadToEndAsync();
+        }
+
+        private async Task<string> GetCustomerProductHttp()
+        {
+            var uri = "http://localhost:61992/api/Forms?customerId=" + int.Parse(textBox1.Text);
+            WebRequest oRequest = WebRequest.Create(uri);
+            WebResponse oResponse = oRequest.GetResponse();
+            StreamReader sr = new StreamReader(oResponse.GetResponseStream());
+            return await sr.ReadToEndAsync();
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            string customerProduct = await GetCustomerProductHttp();
+            List<DataBase.Model.ViewModel.CustomerProductViewModel> list = JsonConvert.DeserializeObject<List<DataBase.Model.ViewModel.CustomerProductViewModel>>(customerProduct);
+            dataGridView3.DataSource = list;
         }
     }
 }

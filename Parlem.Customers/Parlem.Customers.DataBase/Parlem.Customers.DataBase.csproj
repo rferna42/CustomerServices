@@ -75,6 +75,7 @@
     <Compile Include="Model\Product.cs">
       <DependentUpon>CustomerServiceModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ViewModel\CustomerProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\ViewModel\CustomerViewModel.cs" />
     <Compile Include="Model\ViewModel\ProductViewModel.cs" />
