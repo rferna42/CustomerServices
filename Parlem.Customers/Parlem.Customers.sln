@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parlem.Customers.API", "Par
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parlem.Customers.WForms", "Parlem.Customers.WForms\Parlem.Customers.WForms.csproj", "{A96E98DC-228E-4296-8ECD-43B2DD5E86FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parlem.Customers.ViewModel", "ViewModel\Parlem.Customers.ViewModel.csproj", "{A404F8B8-C8F5-46F3-A133-A00F99489C6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parlem.Customers.DataBase", "Parlem.Customers.DataBase\Parlem.Customers.DataBase.csproj", "{A2C84686-83D9-406D-B5AC-884D8A581BE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{A96E98DC-228E-4296-8ECD-43B2DD5E86FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96E98DC-228E-4296-8ECD-43B2DD5E86FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A96E98DC-228E-4296-8ECD-43B2DD5E86FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A404F8B8-C8F5-46F3-A133-A00F99489C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A404F8B8-C8F5-46F3-A133-A00F99489C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A404F8B8-C8F5-46F3-A133-A00F99489C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A404F8B8-C8F5-46F3-A133-A00F99489C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C84686-83D9-406D-B5AC-884D8A581BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C84686-83D9-406D-B5AC-884D8A581BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C84686-83D9-406D-B5AC-884D8A581BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C84686-83D9-406D-B5AC-884D8A581BE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

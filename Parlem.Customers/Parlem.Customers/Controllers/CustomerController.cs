@@ -7,11 +7,11 @@ namespace Parlem.Customers.Controllers
     public class CustomerController : ApiController
     {
         [HttpPost]
-        public IHttpActionResult AddCustomer(ViewModel.CustomerViewModel model)
+        public IHttpActionResult AddCustomer(DataBase.Model.ViewModel.CustomerViewModel model)
         {
-            using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
+            using (DataBase.Model.CustomerServicesEntities db = new DataBase.Model.CustomerServicesEntities())
             {
-                var customer = new Models.Customer();
+                var customer = new DataBase.Model.Customer();
 
                 customer.customerId = model.customerId;
                 customer.docType = model.docType;
@@ -29,13 +29,13 @@ namespace Parlem.Customers.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetCustomer(ViewModel.CustomerViewModel model)
+        public IHttpActionResult GetCustomer(DataBase.Model.ViewModel.CustomerViewModel model)
         {
-            List<ViewModel.CustomerViewModel> list = new List<ViewModel.CustomerViewModel>();
+            List<DataBase.Model.ViewModel.CustomerViewModel> list = new List<DataBase.Model.ViewModel.CustomerViewModel>();
 
-            using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
+            using (DataBase.Model.CustomerServicesEntities db = new DataBase.Model.CustomerServicesEntities())
             {
-                list = (from d in db.Customer select new ViewModel.CustomerViewModel
+                list = (from d in db.Customer select new DataBase.Model.ViewModel.CustomerViewModel
                 {
                     customerId = d.customerId,
                     docType = d.docType,

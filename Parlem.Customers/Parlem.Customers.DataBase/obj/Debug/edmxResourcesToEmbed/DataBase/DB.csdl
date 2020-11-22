@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CustomerServicesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="customerId" />
+    </Key>
+    <Property Name="customerId" Type="Int32" Nullable="false" />
+    <Property Name="docType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="docNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="givenName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="familyName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="serviceId" />
+    </Key>
+    <Property Name="serviceId" Type="Int32" Nullable="false" />
+    <Property Name="productName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="productNameType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="numeracioTerminal" Type="Int32" />
+    <Property Name="soldAt" Type="DateTime" Precision="3" />
+    <Property Name="customerId" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="CustomerServicesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customer" EntityType="Self.Customer" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+  </EntityContainer>
+</Schema>

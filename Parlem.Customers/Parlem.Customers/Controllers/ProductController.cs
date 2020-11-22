@@ -7,11 +7,11 @@ namespace Parlem.Customers.Controllers
     public class ProductController : ApiController
     {
         [HttpPost]
-        public IHttpActionResult AddProduct(ViewModel.ProductViewModel model)
+        public IHttpActionResult AddProduct(DataBase.Model.ViewModel.ProductViewModel model)
         {
-            using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
+            using (DataBase.Model.CustomerServicesEntities db = new DataBase.Model.CustomerServicesEntities())
             {
-                var product = new Models.Product();
+                var product = new DataBase.Model.Product();
 
                 product.serviceId = model.serviceId;
                 product.productName = model.productName;
@@ -27,14 +27,14 @@ namespace Parlem.Customers.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetProduct(ViewModel.ProductViewModel model)
+        public IHttpActionResult GetProduct(DataBase.Model.ViewModel.ProductViewModel model)
         {
-            List<ViewModel.ProductViewModel> list = new List<ViewModel.ProductViewModel>();
+            List<DataBase.Model.ViewModel.ProductViewModel> list = new List<DataBase.Model.ViewModel.ProductViewModel>();
 
-            using (Models.CustomerServicesEntities db = new Models.CustomerServicesEntities())
+            using (DataBase.Model.CustomerServicesEntities db = new DataBase.Model.CustomerServicesEntities())
             {
                 list = (from d in db.Product
-                        select new ViewModel.ProductViewModel
+                        select new DataBase.Model.ViewModel.ProductViewModel
                         {
                             serviceId = d.serviceId,
                             productName = d.productName,

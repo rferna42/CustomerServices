@@ -1,0 +1,11 @@
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\obj\Debug\Parlem.Customers.DataBase.csproj.CoreCompileInputs.cache
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\Parlem.Customers.DataBase.dll.config
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\Parlem.Customers.DataBase.dll
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\Parlem.Customers.DataBase.pdb
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\EntityFramework.dll
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\EntityFramework.xml
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\obj\Debug\Parlem.Customers.DataBase.csproj.CopyComplete
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\obj\Debug\Parlem.Customers.DataBase.dll
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\obj\Debug\Parlem.Customers.DataBase.pdb
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ruben.fernandezm\Desktop\CustomerServices\Parlem.Customers\Parlem.Customers.DataBase\bin\Debug\EntityFramework.SqlServer.xml

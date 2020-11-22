@@ -87,9 +87,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ViewModel\Parlem.Customers.ViewModel.csproj">
-      <Project>{a404f8b8-c8f5-46f3-a133-a00f99489c6c}</Project>
-      <Name>Parlem.Customers.ViewModel</Name>
+    <ProjectReference Include="..\Parlem.Customers.DataBase\Parlem.Customers.DataBase.csproj">
+      <Project>{a2c84686-83d9-406d-b5ac-884d8a581be4}</Project>
+      <Name>Parlem.Customers.DataBase</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

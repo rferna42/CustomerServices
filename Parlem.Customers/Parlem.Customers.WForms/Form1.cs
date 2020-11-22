@@ -23,11 +23,11 @@ namespace Parlem.Customers.WForms
         private async void Form1_Load(object sender, EventArgs e)
         {
             string customer = await GetCustomerHttp();
-            List<ViewModel.CustomerViewModel> customerList = JsonConvert.DeserializeObject<List<ViewModel.CustomerViewModel>>(customer);
+            List<DataBase.Model.ViewModel.CustomerViewModel> customerList = JsonConvert.DeserializeObject<List<DataBase.Model.ViewModel.CustomerViewModel>>(customer);
             dataGridView3.DataSource = customerList;
 
             string product = await GetProductHttp();
-            List<ViewModel.ProductViewModel> productList = JsonConvert.DeserializeObject<List<ViewModel.ProductViewModel>>(product);
+            List<DataBase.Model.ViewModel.ProductViewModel> productList = JsonConvert.DeserializeObject<List<DataBase.Model.ViewModel.ProductViewModel>>(product);
             dataGridView4.DataSource = productList;
         }
 
